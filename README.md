@@ -22,8 +22,7 @@ We use [Github](https://github.com/) for all of our changes. Github is a web-bas
 
 3. Now we're going to create a `README.md` file. A README is a considered best practice for every practice. It tells anyone that is looking at your project exactly what it is that they're looking at, and potentially how to use it. Notice all the instructions for this code-along are in a `README.md`. We'll also open this `README.md` and include a few instructions...
 `touch README.md`
-`subl README.md`
-
+`subl README.md` 
 "This is my personal portfolio. This site will include contact information, a personal bio, and links to all of my work"
 
 4. Now let's see if git noticed that we made changes to our `README.md`. `git status` tells us what files we have changed. It keeps track of files in two different ways, files that are not staged for commit, and files that are staged for committing. All git commands are prefaced with the word `git`. It's how our computer knows exactly what program we're talking to.
