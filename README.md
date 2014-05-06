@@ -77,8 +77,7 @@ Now if we reload index.html in the browser, we should see my name.
 `git clone git@github.com:vicfriedman/find-missing-pet.git`
 
 19. Now that we have it up locally, we can cd into the project `cd find-missing-pet` and begin working on the lab! 
-
-<!-- After they complete the lab... -->
+<!--- After they complete the lab... --->
 20. Now that you completed your lab, make sure it's all pushed up to your version of the repository on github. And now we need to create a pull request. A pull request is the best practice for submitting contribution of work to an open source project. To create a pull request, go to your version of the repository on your github account. We'll click the green button in the top left corner. On the next page, we'll want to enter a comment for the pull request, "completed lab, all tests pass" and click submit. This is how I'll be able to review your work and give you feedback on your code. 
 
 
