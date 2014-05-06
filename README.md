@@ -9,7 +9,7 @@ The goals of the workshop are to get you comfortable with git. Git is a distribu
 
 So what does that mean? Version control is a way to save the history of your work. At every point while writing your code that something works successfully, you'll want to make sure to save that point. Git keeps track of all of those moments that you save. Imagine you keep working, and suddenly EVERYTHING is broken. What would you do? If you used git and saved your work along the way, you could essentially rewind your code history to a working version.
 
-We use [Github](https://github.com/) for all of our changes. Github is a web-based software for hosting your code, as well as version control through git. We're going to be using the accounts we made during environment setup for all of our lab work, as well as any projects we may be working on.
+We use [Github](https://github.com/) for all of our changes. Github is a web-based software for hosting your code, as well as version control, through git. We're going to be using the accounts we made during environment setup for all of our lab work, as well as any projects we may be working on.
 
 ###So let's actually start a project.
 
@@ -17,7 +17,7 @@ We use [Github](https://github.com/) for all of our changes. Github is a web-bas
 `mkdir my_website`
 `cd my_website`
 
-2. Now that we're in the project, we need to initialize a new git repository. A repository is the git version of our project directory. We have to initialize it on our own computer so that it can start tracking. We're basically saying "Hey computer, this is a new git project." `git init` also creates a `.git` file in your new git project, which contains all the information git needs to sync the local version of your project (the one on your personal computer), with the version on github.com
+2. Now that we're in the project, we need to initialize a new git repository. A repository is the git version of our project directory. We have to initialize it on our own computer so that git can start tracking. We're basically saying "Hey computer, this is a new git project." `git init` also creates a `.git` file in your new git project, which contains all the information git needs to sync the local version of your project (the one on your personal computer), with the version on github.com
 `git init`
 
 3. Now we're going to create a `README.md` file. A README is a considered best practice for every practice. It tells anyone that is looking at your project exactly what it is that they're looking at, and potentially how to use it. Notice all the instructions for this code-along are in a `README.md`. We'll also open this `README.md` and include a few instructions...
