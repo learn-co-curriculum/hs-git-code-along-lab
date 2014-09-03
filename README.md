@@ -9,11 +9,11 @@
 
 The goals of this workshop is to get you comfortable with git. Git is a distributed version control and source code management system. 
 
-So what does that mean? Version control is a way to save the history of your work. At every point while writing your code that something works successfully, you'll want to make sure to save that point. Git keeps track of all of those moments that you save. Imagine you keep working, and suddenly EVERYTHING is broken. What would you do? If you used git and saved your work along the way, you could essentially rewind your code history to a working version.
+So what does that mean? Version control is a way to save the history of your work. While writing your code, you'll want to make sure to save at every point that your code is working properly. Git keeps track of all of those moments that you save. Imagine you keep working, and suddenly EVERYTHING is broken. What would you do? If you used git and saved your work along the way, you could essentially rewind your code history to a working version.
 
 ### So let's actually start a project.
 
-1. First things first, we need to create directory for our project on our computers that will hold our code. It's considered best practice to hold single projects in their own directories. You wouldn't want to just have everything floating separately on your desktop. Let's make a directory for our project and `cd` into it:
+1. First things first, we need to create a directory for our project on our computers that will hold our code. It's considered best practice to hold single projects in their own directories. You wouldn't want to just have everything floating separately on your desktop. Let's make a directory for our project and `cd` into it:
 
 `mkdir my_code`
 `cd my_code`
@@ -29,7 +29,7 @@ So what does that mean? Version control is a way to save the history of your wor
 `touch README.md`
 `subl README.md` 
 
-"This is my personal portfolio. This site will include contact information, a personal bio, and links to all of my work"
+"Here is my personal repository of ruby code."
 
 4. Now let's see if git noticed that we made changes to our `README.md`. `git status` tells us what files we have changed. It keeps track of files in two different ways, files that are not staged for commit, and files that are staged for committing.
 
@@ -38,26 +38,25 @@ So what does that mean? Version control is a way to save the history of your wor
 6. So this time you're actually ready to save that version of your file. Type `git commit -m "the reason I'm saving this goes here"`. We're actually committing the file now. A commit is just like saving your file. It's like taking a snapshot of your code at that exact moment in time. Git keeps track of all the commits you make, sort of like Microsoft word track-changes does. When you edit a Word file with track-changes, you always enter a comment of why you're changing that line. We do the same thing with commits. The `-m` is saying "I'm going to include a commit message here". 
 `git commit -m "I added a readme"`.
 
-7. Now let's go ahead and make the `strings.rb` document.
+7. Now let's go ahead and make a `strings.rb` document.
 
 `touch strings.rb`
 `subl strings.rb`
 
-11. Remember the string methods we learned last week? Let's write a few lines of code to puts some strings and string methods (maybe something like `puts "hi".upcase`). Now add, commit, and push this file up.
+11. Remember the string methods we learned last week? Let's write a few lines of code to `puts` some strings and string methods (maybe something like `puts "i love ruby".upcase`). Now add and commit this.
 
 `git add <file-name>`
 `git commit -m "created strings.rb"`
-`git push`
 
 12. `git log` is a powerful command that lets you see the history of all your commits. That's also part of why we like to include commit messages. Imagine you're working on a project with 5 other developers. Wouldn't you want them to be able to read a clear and concise message as to what you added to the code base and why? The 7 characters in front of your commit message is the SHA. The SHA is basically the unique identifier of that specific commit.
 
-13. So far, we've been working on what's considered the `master` branch. Master should always be the stable working version of your code. You never want to break master. This is considered a standard workflow, and is especially important to remember if you are working on a project with more than one developer. So where do you do your work then if you have to keep master stable? We create feature branches. 
+13. So far, we've been working on what's considered the `master` branch. Master should always be the stable working version of your code. You never want to break master. This is considered a standard workflow, and is especially important to remember if you are working on a project with more than one developer. So where do you do your work if you have to keep master stable? We create feature branches. 
 
 First, let's confirm we're on master. `git branch` is the command to check your branch location. It's like `pwd` for git.
 
-So now let's create our new feature branch, and then switch to it. To do this, we type `git checkout -b <branch-name>`. Let's name this branch "numbers", because we're going to add some numbers to our doc. Now if we check the branch, it should tell us we're on the numbers branch.
+Let's create our new feature branch, and then switch to it. To do this, we type `git checkout -b <branch-name>`. Let's name this branch "numbers", because we're going to add some numbers to our doc. Now if we check the branch, it should tell us we're on the numbers branch.
 
-14. This branch split off from master after we created the readme and strings.rb, so both of those files will exist on my new branch. Now let's make some changes to strings.rb. Let's add some mathematical equations (maybe something like `puts 1+1`). Then we'll go ahead and add and commit these changes.
+14. This branch split off from master after we created the readme and strings.rb, so both of those files will exist on my new branch. Now let's make some changes to strings.rb. Let's add some mathematical equations (maybe something like `puts 1+1`). Then we'll add and commit these changes.
 
 `git add <file-name>`
 `git commit -m "Added some maths"`
