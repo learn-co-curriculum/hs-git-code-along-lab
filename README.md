@@ -20,7 +20,7 @@ The goals of this workshop is to get you comfortable with git.
 
 `git init` 
 
-`git init` creates a `.git` file in your new git project, which contains all the information git needs to sync the local version of your project (the one on your personal computer), with the version on github.com
+* This creates a `.git` file in your new git project, which contains all the information git needs to sync the local version of your project (the one on your personal computer), with the version on github.com
 
 * Now create a `README.md` file. A README is a considered best practices, and we should make one for every project we work on. It tells anyone that is looking at your project exactly what it is that they're looking at, and potentially how to use it. Notice all the instructions for this code-along are in a `README.md`. Let's make a `README.md`, open it, and include a few instructions.
 
