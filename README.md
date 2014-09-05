@@ -7,7 +7,7 @@
 
 ## Git Workshop
 
-The goals of this workshop is to get you comfortable with git. Git is a distributed version control and source code management system. 
+The goals of this workshop is to get you comfortable with git. 
 
 ### So let's actually start a project.
 
