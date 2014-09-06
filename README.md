@@ -20,24 +20,22 @@ The goals of this workshop is to get you comfortable with git.
 
 `git init` 
 
-* This creates a `.git` file in your new git project, which contains all the information git needs to sync the local version of your project (the one on your personal computer), with the version on github.com
-
-* Now create a `README.md` file. A README is a considered best practices, and we should make one for every project we work on. It tells anyone that is looking at your project exactly what it is that they're looking at, and potentially how to use it. Notice all the instructions for this code-along are in a `README.md`. Let's make a `README.md`, open it, and include a few instructions.
+* Create a `README.md` file to tell anyone who is looking at your project exactly what it is that they're looking at.
 
 `touch README.md`
 `subl README.md` 
 
-"Here is my personal repository of ruby code."
+* Type something into it. Maybe: "Here is my personal repository of ruby code."
 
 * Now let's see if git noticed that we made changes to our `README.md`. 
 
 `git status` 
 
-* Now that we've finished editing our README, we want our file to be staged for commit. 
+* We've finished editing our README, now we want our file to be staged for commit. 
 
 `git add <file-name>` 
 
-* And commit
+* Then commit.
 
 `git commit -m "I added a readme"`.
 
@@ -48,27 +46,41 @@ The `-m` is saying "I'm going to include a commit message here".
 `touch strings.rb`
 `subl strings.rb`
 
-* Remember the string methods we learned last week? Let's write a few lines of code to `puts` some strings and string methods (maybe something like `puts "i love ruby".upcase`). Now add and commit this.
+* Remember the string methods we learned last week? Write a few lines of code in the doc to `puts` some strings and string methods (maybe something like `puts "i love ruby".upcase`). Now add and commit this.
 
-`git add <file-name>`
+`git add strings.rb`
 `git commit -m "created strings.rb"`
 
-* `git log` is a powerful command that lets you see the history of all your commits. That's also part of why we like to include commit messages. Imagine you're working on a project with 5 other developers. Wouldn't you want them to be able to read a clear and concise message as to what you added to the code base and why? The 7 characters in front of your commit message is the SHA. The SHA is basically the unique identifier of that specific commit.
+* Let's take a look at our git commit history
 
-* So far, we've been working on what's considered the `master` branch. Master should always be the stable working version of your code. You never want to break master. So where do you do your work if you have to keep master stable? We create feature branches. First, let's confirm we're on master. `git branch` is the command to check your branch location. It's like `pwd` for git.
+`git log` 
 
-Now Let's create our new feature branch, and then switch to it. To do this, we type `git checkout -b <branch-name>`. Let's name this branch "numbers", because we're going to add some numbers to our doc. Now if we check the branch, it should tell us we're on the numbers branch.
+* See those 7 characters in front of your commit message? That is the SHA. The SHA is basically the unique identifier of that specific commit. Kind of like an address that you would use to find that specific snapshot of your code.
 
-* This branch split off from master after we created the readme and strings.rb, so both of those files will exist on my new branch. Now let's make some changes to strings.rb. Let's add some mathematical equations (maybe something like `puts 1+1`). Then we'll add and commit these changes.
+* We've been working in master branch. Actually let's confirm that.
 
-`git add <file-name>`
+`git branch`
+
+* On master? Good. But now we want to add a new feature. Create a feature branch. You can create a new branch and move to that branch all in one command like this:
+
+`git checkout -b <branch-name>`
+
+* Let's name this branch "numbers", because we're going to add some numbers to our doc. First confirm which branch you are on.
+
+`git branch`
+
+* It should tell us we're on the numbers branch.
+
+* Now let's make some changes to strings.rb. Add some mathematical equations (maybe something like `puts 1+1`). Then add and commit these changes.
+
+`git add strings.rb`
 `git commit -m "Added some maths"`
 
 * Now let's go back to master `git checkout master` and open `strings.rb`. You'll notice your maths are gone! No worries. Those changes only exist on the `numbers` branch.
 
-* Since our math additions are complete and looking good, let's merge those files in to the master branch. To do this, we need to make sure we're on the master branch. Any time you're merging a feature branch into master, you'll want to be on master. 
+* Since our math additions are complete and looking good, let's merge those files in to the master branch. To do this, we need to make sure we're on the master branch. You know how to do that, right? Then merge in the numbers branch.
 
-`git merge <branch-name>`
+`git merge numbers`
 
-Now if we reload strings.rb in the browser, we should see the numbers and mathematical equations that we added. Do you see them?! Fantastic.
+Now we should see the numbers and mathematical equations that we added. Do you see them?! Fantastic.
 
