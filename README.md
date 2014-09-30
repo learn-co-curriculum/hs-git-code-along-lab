@@ -81,9 +81,9 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 * Your new feature is gone! No worries. Right now those changes only exist on the age branch, but we since we are done with that feature for now (And we know it works, right? Did you test it?) you can merge those changes into the master branch.
 
-* First make sure you are on your master branch (remember that command?). Then merge in the age branch with this command:
+* First make sure you are on your master branch (remember the command to check which branch you are on?). Then merge in the changes on your age branch with this command:
 
 `git merge age`
 
-Now you should all the code that you added asking a user for their name AND their age. Do you see both?! Fantastic.
+Now you should see all the code that you added asking a user for their name AND their age. Do you see both?! Fantastic.
 
