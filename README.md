@@ -13,6 +13,7 @@ The goal of this workshop is to get you comfortable with git.
 
 * Create a new directory for this project called `git_practice` and `cd` into it. 
 
+
 * Are you in your new `git_practice` directory? Great! Now that we've created a new project, we need to initialize a git repository to track our changes. To do this type:
 
 `git init` 
