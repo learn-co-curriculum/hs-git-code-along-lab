@@ -77,9 +77,9 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 * Check the status of your file. Then add and commit these changes.
 
-* Now let's go back to the master branch `git checkout master` and open `git_practice.rb`. 
+* Now let's go back to the master branch `git checkout master` and take a look at `git_practice.rb`. 
 
-* Your new feature is gone! No worries. Right now those changes only exist on the age branch, but we since we are done with that feature for now (And we know it works, right? Did you test it?) can merge those changes into the master branch.
+* Your new feature is gone! No worries. Right now those changes only exist on the age branch, but we since we are done with that feature for now (And we know it works, right? Did you test it?) you can merge those changes into the master branch.
 
 * First make sure you are on your master branch (remember that command?). Then merge in the age branch with this command:
 
