@@ -11,12 +11,9 @@ The goal of this workshop is to get you comfortable with git.
 
 ### So let's actually start a project.
 
-* Create a new directory for this project in your `Development` directory and `cd` into it with the following commands in the terminal:
+* Create a new directory for this project called `git_practice` and `cd` into it. 
 
-`mkdir git_practice`
-`cd git_practice`
-
-* Now that we've created a new project, we need to initialize a new git repository to track our changes. To do this type:
+* Are you in your new `git_practice` directory? Great! Now that we've created a new project, we need to initialize a git repository to track our changes. To do this type:
 
 `git init` 
 
