@@ -11,33 +11,33 @@ The goals of this workshop is to get you comfortable with git.
 
 ### So let's actually start a project.
 
-* Create a directory for the project on your computer that will hold your code and `cd` into it:
+* Create a directory for the project on your computer that will hold your code and `cd` into it with the following commands in the terminal:
 
 `mkdir my_code`
 `cd my_code`
-
-* Now that we're in the project, we need to initialize a new git repository. 
-
-`git init` 
 
 * Create a `README.md` file to tell anyone who is looking at your project exactly what it is that they're looking at.
 
 `touch README.md`
 `subl README.md` 
 
-* Type something into it. Maybe: "Here is my personal repository of ruby code."
+* Now that we've created a new project, we need to initialize a new git repository to track our changes with:
 
-* Now let's see if git noticed that we made changes to our `README.md`. 
+`git init` 
+
+* Now let's type something into our README. Maybe something like, "Here is my personal repository of ruby code."
+
+* Now let's see if git noticed that we made changes to our `README.md` with:
 
 `git status` 
 
-* We've finished editing our README, now we want our file to be staged for commit. 
+* We've finished editing our README, now we want our file to be staged for commit. Type:
 
 `git add <file-name>` 
 
-* Then commit.
+* Then commit with:
 
-`git commit -m "I added a readme"`.
+`git commit -m "Added a readme"`.
 
 The `-m` is saying "I'm going to include a commit message here". 
 
@@ -46,39 +46,44 @@ The `-m` is saying "I'm going to include a commit message here".
 `touch strings.rb`
 `subl strings.rb`
 
-* Remember the string methods we learned last week? Write a few lines of code in the doc to `puts` some strings and string methods (maybe something like `puts "i love ruby".upcase`). Now add and commit this.
+* Remember the string methods we learned last week? Write a few lines of code in the doc to `puts` some strings and string methods. Now add and commit this.
 
 `git add strings.rb`
-`git commit -m "created strings.rb"`
+`git commit -m "Added strings.rb"`
 
-* Let's take a look at our git commit history
+* Let's take a look at our git commit history:
 
 `git log` 
 
-* See those 7 characters in front of your commit message? That is the SHA. The SHA is basically the unique identifier of that specific commit. Kind of like an address that you would use to find that specific snapshot of your code.
+* You should see your two commit messages and their unique SHA numbers.
 
 * We've been working in master branch. Actually let's confirm that.
 
 `git branch`
 
-* On master? Good. But now we want to add a new feature. Create a feature branch. You can create a new branch and move to that branch all in one command like this:
+* On master? Good. But now we want to add a new feature. Let's create a new branch called `numbers`. You can create a new branch and move to that branch like this:
 
-`git checkout -b <branch-name>`
+`git branch numbers`
+`git checkout numbers`
 
-* Let's name this branch "numbers", because we're going to add some numbers to our doc. First confirm which branch you are on.
+* Now let's see which branch we are on.
 
 `git branch`
 
 * It should tell us we're on the numbers branch.
 
-* Now let's make some changes to strings.rb. Add some mathematical equations (maybe something like `puts 1+1`). Then add and commit these changes.
+* Now let's make some changes to strings.rb. Go ahead and add some math equations to your file. Now check the status of your file with 
+
+`git status`
+
+* Then add and commit these changes.
 
 `git add strings.rb`
-`git commit -m "Added some maths"`
+`git commit -m "Added some math"`
 
-* Now let's go back to master `git checkout master` and open `strings.rb`. You'll notice your maths are gone! No worries. Those changes only exist on the `numbers` branch.
+* Now let's go back to the master branch `git checkout master` and open `strings.rb`. You'll notice your math is gone! No worries. Right now those changes only exist on the `numbers` branch, but we can pull them into your master branch.
 
-* Since our math additions are complete and looking good, let's merge those files in to the master branch. To do this, we need to make sure we're on the master branch. You know how to do that, right? Then merge in the numbers branch.
+* Since our math additions are complete and looking good, let's merge those files in to the master branch. First check to see if you are on the master branch (remember that command?). Then merge in the numbers branch with this command:
 
 `git merge numbers`
 
