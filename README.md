@@ -33,59 +33,60 @@ The goals of this workshop is to get you comfortable with git.
 
 * We've finished editing our README, now we want our file to be staged for commit. Type:
 
-`git add <file-name>` 
+`git add README.md` 
 
 * Then commit with:
 
 `git commit -m "Added a readme"`.
 
-The `-m` is saying "I'm going to include a commit message here". 
+The `-m` flag is short for message. We need to add it before the commit message.
 
-* Now let's go ahead and make a `strings.rb` document.
+* Now let's go ahead and make a `git_practice.rb` document and open it up.
 
-`touch strings.rb`
-`subl strings.rb`
+`touch git_practice.rb`
+`subl git_practice.rb`
 
-* Remember the string methods we learned last week? Write a few lines of code in the doc to `puts` some strings and string methods. Now add and commit this.
+* Before we even add any code let's just go ahead and add and commit these files:
 
-`git add strings.rb`
-`git commit -m "Added strings.rb"`
+`git add git_practice.rb` 
+`git commit -m "Added git_practice.rb"`.
 
-* Let's take a look at our git commit history:
+* Now let's add some code to our git_practice.rb. Write some code that asks a user for their name and then tells them hello. Once you've finished adding this code `add` and `commit` these changes.
+
+* Let's check our `git status`. It should tell you that you are up to date and there is nothing new to commit. Now let's take a look at our git commit history with:
 
 `git log` 
 
 * You should see your two commit messages and their unique SHA numbers.
 
-* We've been working in master branch. Actually let's confirm that.
+* Ok, we've just received a request for a new feature in our program that asks users for their age. Before we add this feature let's create a new feature branch to track our changes.
+
+* We've been working in master branch. Actually let's just confirm that we are on the master branch with this command:
 
 `git branch`
 
-* On master? Good. But now we want to add a new feature. Let's create a new branch called `numbers`. You can create a new branch and move to that branch like this:
+* On master? Good. Now let's add a new `age` branch with these commands:
 
-`git branch numbers`
-`git checkout numbers`
+`git branch age`
+`git checkout age`
 
 * Now let's see which branch we are on.
 
 `git branch`
 
-* It should tell us we're on the numbers branch.
+* It should tell you you are on the `age` branch.
 
-* Now let's make some changes to strings.rb. Go ahead and add some math equations to your file. Now check the status of your file with 
-
-`git status`
+* Now let's make some changes to git_practice.rb. Add a feature that takes in your user's age and tells them how old they are in dog years. (Not sure how to calculate dog years? Ask your neighbor.) Now check the status of your file. 
 
 * Then add and commit these changes.
 
-`git add strings.rb`
-`git commit -m "Added some math"`
+* Now let's go back to the master branch `git checkout master` and open `git_practice.rb`. 
 
-* Now let's go back to the master branch `git checkout master` and open `strings.rb`. You'll notice your math is gone! No worries. Right now those changes only exist on the `numbers` branch, but we can pull them into your master branch.
+* Your new feature is gone! No worries. Right now those changes only exist on the `age` branch, but we can pull them into your master branch.
 
-* Since our math additions are complete and looking good, let's merge those files in to the master branch. First check to see if you are on the master branch (remember that command?). Then merge in the numbers branch with this command:
+* Since our age additions are complete and looking good, let's merge those changes in to the master branch. First move to your master branch (remember that command?). Then merge in the numbers branch with this command:
 
-`git merge numbers`
+`git merge age`
 
-Now we should see the numbers and mathematical equations that we added. Do you see them?! Fantastic.
+Now you should the code you added asking a user for their name AND their age. Do you see both?! Fantastic.
 
