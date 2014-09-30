@@ -7,25 +7,24 @@
 
 ## Git Workshop
 
-The goals of this workshop is to get you comfortable with git. 
+The goal of this workshop is to get you comfortable with git. 
 
 ### So let's actually start a project.
 
-* Create a directory for the project on your computer that will hold your code and `cd` into it with the following commands in the terminal:
+* Create a new directory for this project in your `Development` directory and `cd` into it with the following commands in the terminal:
 
-`mkdir my_code`
-`cd my_code`
+`mkdir git_practice`
+`cd git_practice`
 
-* Create a `README.md` file to tell anyone who is looking at your project exactly what it is that they're looking at.
-
-`touch README.md`
-`subl README.md` 
-
-* Now that we've created a new project, we need to initialize a new git repository to track our changes with:
+* Now that we've created a new project, we need to initialize a new git repository to track our changes. To do this type:
 
 `git init` 
 
-* Now let's type something into our README. Maybe something like, "Here is my personal repository of ruby code."
+* Now let's add a `README.md` file to tell anyone who is looking at the project exactly what it is that they're looking at:
+
+`touch README.md` 
+
+* Open up your README in Sublime Text and add this description: "This is my first time using git!".
 
 * Now let's see if git noticed that we made changes to our `README.md` with:
 
@@ -65,7 +64,7 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 `git branch`
 
-* On master? Good. Now let's add a new `age` branch with these commands:
+* On master? Good. Now let's add a new age branch with these commands:
 
 `git branch age`
 `git checkout age`
@@ -74,19 +73,19 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 `git branch`
 
-* It should tell you you are on the `age` branch.
+* It should tell you you are on the age branch.
 
-* Now let's make some changes to git_practice.rb. Add a feature that takes in your user's age and tells them how old they are in dog years. (Not sure how to calculate dog years? Ask your neighbor.) Now check the status of your file. 
+* Now add a feature in git_practice.rb that takes in your user's age and tells them how old they are in dog years. (Not sure how to calculate dog years? Ask your neighbor.) 
 
-* Then add and commit these changes.
+* Check the status of your file. Then add and commit these changes.
 
 * Now let's go back to the master branch `git checkout master` and open `git_practice.rb`. 
 
-* Your new feature is gone! No worries. Right now those changes only exist on the `age` branch, but we can pull them into your master branch.
+* Your new feature is gone! No worries. Right now those changes only exist on the age branch, but we since we are done with that feature for now (And we know it works, right? Did you test it?) can merge those changes into the master branch.
 
-* Since our age additions are complete and looking good, let's merge those changes in to the master branch. First move to your master branch (remember that command?). Then merge in the numbers branch with this command:
+* First make sure you are on your master branch (remember that command?). Then merge in the age branch with this command:
 
 `git merge age`
 
-Now you should the code you added asking a user for their name AND their age. Do you see both?! Fantastic.
+Now you should all the code that you added asking a user for their name AND their age. Do you see both?! Fantastic.
 
