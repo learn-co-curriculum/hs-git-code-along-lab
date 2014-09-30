@@ -73,7 +73,7 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 * It should tell you you are on the age branch.
 
-* Now add a feature in git_practice.rb that takes in your user's age and tells them how old they are in dog years. (Not sure how to calculate dog years? Ask your neighbor.) 
+* Now add a feature in `git_practice.rb` that takes in your user's age and tells them how old they are in dog years. (Not sure how to calculate dog years? Ask your neighbor.) 
 
 * Check the status of your file. Then add and commit these changes.
 
