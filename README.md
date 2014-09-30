@@ -56,7 +56,7 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 * You should see your two commit messages and their unique SHA numbers.
 
-* Ok, we've just received a request for a new feature in our program that asks users for their age. Before we add this feature let's create a new feature branch to track our changes.
+* Ok, we've just received a request for a new feature in our program that asks users for their age. Before we add this feature let's create a new branch where we will do our work and track our changes.
 
 * We've been working in master branch. Actually let's just confirm that we are on the master branch with this command:
 
