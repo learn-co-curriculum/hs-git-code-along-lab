@@ -22,7 +22,7 @@ The goal of this workshop is to get you comfortable with git.
 
 `touch README.md` 
 
-* Open up your README in Sublime Text and add this description: "This is my first time using git!".
+* Open up your README in an editor and add this description: "This is my first time using git!".
 
 * Now let's see if git noticed that we made changes to our `README.md` with:
 
@@ -41,7 +41,6 @@ The `-m` flag is short for message. We need to add it before the commit message.
 * Now let's go ahead and make a `git_practice.rb` document and open it up.
 
 `touch git_practice.rb`
-`subl git_practice.rb`
 
 * Before we even add any code let's just go ahead and add and commit these files:
 
