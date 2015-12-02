@@ -81,3 +81,5 @@ The `-m` flag is short for message. We need to add it before the commit message.
 
 Now you should see all the code that you added asking a user for their name AND their age. Do you see both?! Fantastic.
 
+
+<a href='https://learn.co/lessons/hs-git-code-along-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
